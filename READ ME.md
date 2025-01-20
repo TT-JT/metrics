@@ -40,20 +40,31 @@ f,	0,	0.44
 ### 指标
 #### 评测指标
 主要用到的指标是准确率accuracy、召回率recall、精确率precsion、F1score，需要根据混淆矩阵计算它们在不同阈值下的值，根据需要选取阈值。
+
 混淆矩阵：
-｜ 正例标签为0时｜预测为0｜预测为1｜
-｜---｜---｜---｜
-｜真实值为0｜TP｜FN｜
-｜真实值为1｜FP｜TN｜
+
+| 正例标签为 0 时 | 预测为 0 | 预测为 1 |
+| -------------- | ------- | ------- |
+| 真实值为 0 | TP | FN |
+| 真实值为 1 | FP | TN |
+
 TP（True Positives)：真正例，即预测为正例而且实际上也是正例；
+
 FP（False Positives)：假正例，即预测为正例然而实际上却是负例；
+
 FN（false Negatives)：假负例，即预测为负例然而实际上却是正例；
+
+
 TN（True Negatives)：真负例，即预测为负例而且实际上也是负例。
 
 准确率accuracy：(TP+TN)/(TP+FP+FN+TN)
+
 召回率recall：TP/(TP+FN)
+
 精确率precision：TP/(TP+FP)
+
 F1score：2*recall*precision/(precision+recall)=2TP/(2TP+FP+FN)
+
 提升度lift：precison/样本正例比率
 
 重点关注的指标是召回率和精确率。
